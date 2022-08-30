@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    height: 900px;
+}
+.left{
+    order: 1;
+}
+.main{
+    order: 2;
+    flex: 1 1 auto;
+}
+.right{
+    order: 3;
+}
