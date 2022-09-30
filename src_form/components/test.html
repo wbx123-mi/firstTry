@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var a =0;
+        // function demo(arr){
+        //     if(arr.children){
+        //         a++
+        //         demo(arr.children)
+        //         console.log('if')
+                
+        //     }else{
+        //         console.log('else')
+        //     }
+        //     return a
+        // }
+        // let arr = {num:1,children:{num:2,children:{num:3,children:null}}}
+        // console.log(demo(arr))
+        // Array.prototype.myForeach = function(back){ //手写 foreach
+        //     for(let i=0;i<this.length;i++){
+        //         back(this[i],i,this)
+        //     }
+        // }
+        // let a = [1,2,3,4];
+        // a.myForeach((item,index)=>{
+        //     a[index]=item*2
+        // })
+        // console.log(a)
+         let a = [1,2,3,4];
+        Array.prototype.myMap=function(back){
+            for(let i;i<this.length;i++){
+                back(this[i],i,this)
+            }
+        }
+        let b =  a.myMap((item,index)=>{
+            console.log(item)
+        })
+        let c = a.map((item)=>{
+            return item = 3
+        })
+        console.log(c)
+    </script>
+</body>
+</html>
